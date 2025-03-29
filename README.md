@@ -22,6 +22,7 @@ Make sure you have the following installed:
  **Clone the repository:**
 
 git clone https://github.com/Rajeevkr18/Whetherapp.git
+
 cd weatherapp
 
 ### Install dependencies:
