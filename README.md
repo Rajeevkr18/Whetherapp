@@ -1,4 +1,4 @@
-Weather Dashboard Web App
+#Weather Dashboard Web App
 
 This project is a Weather Dashboard Web App built using React.js. It integrates the OpenWeatherMap API to display live weather information.
 
