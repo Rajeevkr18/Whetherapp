@@ -11,8 +11,7 @@ const HistoryList = ({ history, onSelect, onDelete }) => {
         <ul>
           {history.map((item, index) => (
             <li key={index} className="history-item">
-              <span onClick={() => onSelect(item)}>{item}</span>
-              {/* <button className="delete-btn" onClick={() => onDelete(item)}>❌</button> */}
+              <span onClick={() => onSelect(item)}>{item}</span> 
             </li>
           ))}
         </ul>
