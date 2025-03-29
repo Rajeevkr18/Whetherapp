@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+Weather Dashboard Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Weather Dashboard Web App built using React.js. It integrates the OpenWeatherMap API to display live weather information.
 
-## Available Scripts
+Tech Stack
 
-In the project directory, you can run:
+Frontend: React.js, CSS (No Tailwind CSS used)
 
-### `npm start`
+API: OpenWeatherMap API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Package Manager: npm
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Setup Instructions
 
-### `npm test`
+Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure you have the following installed:
 
-### `npm run build`
+Node.js (LTS version recommended)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm (comes with Node.js)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the repository:
 
-### `npm run eject`
+git clone https://github.com/yourusername/weather-dashboard.git
+cd weather-dashboard
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create a .env file in the root directory and add your OpenWeatherMap API key:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+REACT_APP_WEATHER_API_KEY=your_api_key_here
 
-## Learn More
+Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open http://localhost:3000 in your browser.
+API Integration
 
-### Code Splitting
+OpenWeatherMap API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Base URL
 
-### Analyzing the Bundle Size
+https://api.openweathermap.org/data/2.5/weather
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Required Parameters
 
-### Making a Progressive Web App
+Parameter
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Description
 
-### Advanced Configuration
+q
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+City name (e.g., q=London)
 
-### Deployment
+appid
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Your API key
 
-### `npm run build` fails to minify
+units
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Metric (units=metric) or Imperial (units=imperial)
+
+Example Request
+
+https://api.openweathermap.org/data/2.5/weather?q=London&appid=your_api_key&units=metric
+Response Format
+
+{
+  "weather": [{ "description": "clear sky" }],
+  "main": { "temp": 25.3, "humidity": 60 },
+  "wind": { "speed": 3.2 }
+}
+
+Rate Limits
+
+Free-tier accounts have a limit of 60 requests per minute.
+
+Build and Deployment
+
+To build the app for production:
+
+npm run build
+
+The production-ready files will be in the build/ directory.
+
+For deployment options, check out React deployment guide.
+
+Live Demo
+
+Access the deployed application here: https://whether-application.netlify.app/
